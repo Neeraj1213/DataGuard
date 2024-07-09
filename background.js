@@ -9,7 +9,7 @@ async function checkConfidentialData(text) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer '
+                'Authorization': 'Bearer api'
             },
             body: JSON.stringify({
                 model: 'gpt-3.5-turbo',

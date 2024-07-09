@@ -8,7 +8,7 @@ document.addEventListener('paste', (event) => {
             if (response.result === 'error') {
                 console.error('Error response from background script:', response);
                 alert('Error while checking data');
-            } else if (response.result.includes('confidential')) {
+            } else if (response.result === 'confidential') {
                 alert('Pasted data contains confidential info');
             } else {
                 alert('Pasted data is not confidential');
