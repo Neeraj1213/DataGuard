@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "Confidential Data Checker",
+    "version": "1.0",
+    "description": "Checks if the data being copy-pasted is confidential using OpenAI's API.",
+    "permissions": ["clipboardRead", "clipboardWrite", "storage", "activeTab"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
